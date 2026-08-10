@@ -1,0 +1,33 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment / secrets
+.env
+*.key
+*.pem
+credentials/
+secrets/
+
+# Virtual machine files
+*.vmdk
+*.vmem
+*.vmsn
+*.vmss
+*.nvram
+*.vmxf
+
+# Packet captures
+*.pcap
+*.pcapng
