@@ -46,9 +46,12 @@ The VMs can communicate with each other but do not have network connectivity to 
 ```bash
 ping -c 4 192.168.200.10
 Result - Success
-
+```
 ### Metasploitable 2 → Kali
 
 ```bash
 ping -c 4 192.168.200.20
 Result - Success
+```
+---
+Screenshots are available in /screenshots folder
