@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Penetration Testing lab uses a VMware LAN Segment named `Pentesting LAB`.
+The Penetration Testing lab uses a VMware LAN Segment named `CYBERLAB`.
 
 The LAN Segment provides an isolated network for communication between the lab virtual machines.
 
@@ -11,7 +11,7 @@ The LAN Segment provides an isolated network for communication between the lab v
 | Setting | Value |
 |---|---|
 | VMware network | LAN Segment |
-| LAN Segment | `Pentesting LAB` |
+| LAN Segment | `CYBERLAB` |
 | Network | `192.168.200.0/24` |
 | DHCP | Disabled / Not provided |
 | Default gateway | None |
@@ -27,7 +27,7 @@ The LAN Segment provides an isolated network for communication between the lab v
 
 ## Isolation
 
-Both VMs are connected only to the `Pentesting LAB` LAN Segment.
+Both VMs are connected only to the `CYBERLAB` LAN Segment.
 
 The lab does not use:
 
