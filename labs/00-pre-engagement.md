@@ -14,7 +14,7 @@
 
 ## 1. Fictional Company Disclaimer
 
-**Qelvaris Technologies Private Limited is a fictional company created exclusively for this cybersecurity laboratory.**
+**Qelvaris Technologies Private Limited is a fictional company created exclusively for this cybersecurity laboratory practical.**
 
 It does not represent a real client, organization, or production environment. All systems, personnel, business information, and engagement details are simulated.
 
