@@ -146,11 +146,8 @@ The HTTP landing page also exposed several web applications, including:
 - Ports `6667` and `6697` are open.
 - Host identified as `irc.Metasploitable.LAN`.
 
-<<<<<<< HEAD
+
 ![IRC Enumeration](../screenshots/labs/enumeration/irc-enumeration.png)
-=======
-![IRC Enumeration](../screenshots/labs/enumeration/irc-service-enumeration.png)
->>>>>>> 62a3707185a2371c708829095a7ed5ed05b8aaa4
 
 ---
 
