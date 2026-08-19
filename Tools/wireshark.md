@@ -34,6 +34,7 @@ Verify the available network interfaces:
 ```bash
 ip link
 ```
+![Wireshark](../screenshots/tools/wireshark_install_verification.png)
 
 ## Lab Network
 

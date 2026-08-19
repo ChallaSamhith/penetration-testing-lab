@@ -40,6 +40,7 @@ If Metasploit is not installed:
 sudo apt update
 sudo apt install metasploit-framework
 ```
+![Metasploit](../screenshots/tools/metasploit_install_verification.png)
 
 ## Lab Network
 

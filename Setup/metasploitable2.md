@@ -89,3 +89,5 @@ ping -c 4 192.168.200.10
 ```
 
 The expected result is successful communication between Kali and Metasploitable 2 while Internet connectivity remains unavailable.
+
+![Metasploitable 2](../screenshots/setup/Metasploitable2_ipaddr_ping.png)

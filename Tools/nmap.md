@@ -28,6 +28,7 @@ If Nmap is not installed:
 sudo apt update
 sudo apt install nmap
 ```
+![Nmap](../screenshots/tools/nmap_install_verification.png)
 
 ## Target
 

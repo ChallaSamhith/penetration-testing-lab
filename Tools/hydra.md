@@ -34,6 +34,7 @@ If Hydra is not installed:
 sudo apt update
 sudo apt install hydra
 ```
+![Hydra](../screenshots/tools/hydra_install_verification.png)
 
 ## Lab Network
 

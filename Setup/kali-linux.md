@@ -78,6 +78,8 @@ ping -c 3 8.8.8.8
 
 The expected result is failed Internet connectivity.
 
+![Kali Linux](../screenshots/setup/kali-linux_ipaddr_ping.png)
+
 ## Lab Role
 
 Kali is the attack/security workstation.
