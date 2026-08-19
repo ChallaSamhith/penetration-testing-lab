@@ -1,77 +1,181 @@
-# Phase 1 — Reconnaissance
+# Reconnaissance
 
-## Objective
+## 1. Overview
 
-Identify and establish the presence of the authorized target within the assessment network.
+Reconnaissance is the initial technical phase of the penetration test. The objective is to identify the target, verify connectivity, confirm that the host is active, and identify exposed network ports before moving to service enumeration.
 
-## Methodology
+The assessment is performed against a controlled Metasploitable 2 system inside the isolated CYBERLAB network.
 
-This phase follows the reconnaissance/intelligence-gathering principles of the **Penetration Testing Execution Standard (PTES)**.
+> **Disclaimer:** Qelvaris Technologies Private Limited is a fictional company created solely for this cybersecurity lab and documentation exercise. No real company, system, or production environment is involved.
 
-## Target
+---
 
-| Item                | Details          |
-| ------------------- | ---------------- |
-| Asset               | QTL-SRV-01       |
-| IP Address          | 192.168.200.10   |
-| Network             | 192.168.200.0/24 |
-| Testing Workstation | 192.168.200.20   |
+## 2. Target Information
 
-## 1. Host Discovery
+| Item | Details |
+|---|---|
+| Client | Qelvaris Technologies Private Limited |
+| Target | Metasploitable 2 |
+| Target IP | 192.168.200.10 |
+| Tester | Kali Linux |
+| Tester IP | 192.168.200.20 |
+| Network | CYBERLAB |
+| Assessment Type | Black Box |
 
-### Objective
+---
 
-Determine whether the authorized target is reachable from the Kali testing workstation.
+## 3. Objectives
 
-### Commands
+The reconnaissance phase was performed to:
+
+- Verify connectivity with the target.
+- Confirm that the target is active.
+- Identify exposed TCP ports.
+- Identify exposed UDP ports.
+- Establish the initial attack surface for further enumeration.
+
+---
+
+## 4. Connectivity and Host Discovery
+
+Connectivity to the target was first verified using ICMP.
+
+### Command
 
 ```bash
 ping 192.168.200.10
+```
+
+The target responded successfully with no packet loss.
+
+Nmap host discovery was then performed to confirm that the target was active.
+
+### Command
+
+```bash
 nmap -sn 192.168.200.10
 ```
 
-### Results
-
-The target responded successfully to ICMP requests.
-
-Nmap host discovery confirmed that `192.168.200.10` is up and reachable.
-
-Nmap also identified the following MAC address:
+### Result
 
 ```text
-00:0C:29:FA:DD:2A
+Nmap scan report for 192.168.200.10
+Host is up
+MAC Address: 00:0C:29:FA:DD:2A (VMware)
 ```
 
-The MAC address was identified as VMware.
+The target was confirmed to be reachable and active.
 
 ### Evidence
 
-* ICMP connectivity confirmed.
-* Target confirmed active through Nmap host discovery.
-* VMware MAC address identified.
-
-### Observation
-
-The authorized target is active and reachable from the Kali testing workstation.
-
-No vulnerability conclusion is made at this stage.
+![Host discovery](../screenshots/labs/reconnaissance/host-discovery.png)
 
 ---
 
-## Evidence
+## 5. TCP Port Discovery
 
-### Evidence 1 — Host Discovery
+A full TCP port scan was performed to identify exposed TCP services.
 
-**Evidence:** Terminal output from ICMP connectivity test and Nmap host discovery.
+### Command
 
-**Target:** 192.168.200.10
+```bash
+sudo nmap -Pn -p- --open 192.168.200.10
+```
 
-**Result:** Host confirmed active.
+### Result
+
+Multiple TCP ports were identified as open, including:
+
+```text
+21/tcp     ftp
+22/tcp     ssh
+23/tcp     telnet
+25/tcp     smtp
+53/tcp     domain
+80/tcp     http
+111/tcp    rpcbind
+139/tcp    netbios-ssn
+445/tcp    microsoft-ds
+512/tcp    exec
+513/tcp    login
+514/tcp    shell
+1099/tcp   rmiregistry
+1524/tcp   ingreslock
+2049/tcp   nfs
+2121/tcp   ccproxy-ftp
+3306/tcp   mysql
+3632/tcp   distccd
+5432/tcp   postgresql
+5900/tcp   vnc
+6000/tcp   X11
+6667/tcp   irc
+6697/tcp   ircs-u
+8009/tcp   ajp13
+8180/tcp   http
+8787/tcp   msgsrvr
+```
+
+The results indicated a large exposed TCP attack surface and provided the basis for the subsequent enumeration phase.
+
+### Evidence
+
+![TCP port discovery](../screenshots/labs/reconnaissance/tcp-port-discovery.png)
 
 ---
 
-## Phase Status
+## 6. UDP Port Discovery
 
-**Status:** In Progress
+A UDP scan of the top 100 ports was performed to identify commonly exposed UDP services.
 
-The target has been confirmed as reachable. Further reconnaissance is required to identify the externally exposed attack surface.
+### Command
+
+```bash
+sudo nmap -sU --top-ports 100 192.168.200.10
+```
+
+### Result
+
+The scan identified the following open UDP ports:
+
+```text
+53/udp     domain
+111/udp    rpcbind
+137/udp    netbios-ns
+2049/udp   nfs
+```
+
+These services were noted for further enumeration.
+
+### Evidence
+
+![UDP port discovery](../screenshots/labs/reconnaissance/udp-port-discovery.png)
+
+---
+
+## 7. Reconnaissance Findings
+
+| Category | Finding |
+|---|---|
+| Target status | Host is up |
+| Target IP | 192.168.200.10 |
+| Tester IP | 192.168.200.20 |
+| Virtualization | VMware |
+| TCP exposure | Multiple open TCP ports |
+| UDP exposure | 4 open UDP ports identified |
+| Initial attack surface | High |
+
+The reconnaissance phase identified a broad network attack surface consisting of multiple exposed TCP and UDP services.
+
+No vulnerability conclusions were made during this phase.
+
+---
+
+## 8. Conclusion
+
+The target was successfully identified and confirmed to be reachable from the Kali Linux testing system.
+
+TCP and UDP port discovery revealed multiple exposed services requiring further investigation.
+
+The reconnaissance phase is complete.
+
+The assessment proceeds to **Enumeration**, where the identified services will be examined in greater detail to determine their versions, configurations, accessible resources, and potential security weaknesses.
