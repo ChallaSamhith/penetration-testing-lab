@@ -35,7 +35,7 @@ The scan identified multiple exposed services, including:
 - Apache Tomcat
 - Java RMI
 
-![Service and Version Enumeration](../screenshots/enumeration/service-version-enumeration.png)
+![Service and Version Enumeration](../screenshots/labs/enumeration/service-version-enumeration.png)
 
 ---
 
@@ -52,7 +52,7 @@ The scan identified multiple exposed services, including:
 - Anonymous FTP login is allowed.
 - FTP connections are transmitted in plain text.
 
-![FTP Enumeration](../screenshots/enumeration/ftp-enumeration.png)
+![FTP Enumeration](../screenshots/labs/enumeration/ftp-enumeration.png)
 
 ---
 
@@ -70,7 +70,7 @@ The scan identified multiple exposed services, including:
 - Multiple SMB shares are exposed.
 - The `tmp` share allows anonymous read/write access.
 
-![SMB Enumeration](../screenshots/enumeration/smb-enumeration.png)
+![SMB Enumeration](../screenshots/labs/enumeration/smb-enumeration.png)
 
 ---
 
@@ -87,7 +87,7 @@ The scan identified multiple exposed services, including:
 - `mountd`, `status`, and `nlockmgr` services were identified.
 - NFS export information was accessible.
 
-![RPC and NFS Enumeration](../screenshots/enumeration/nfs-rpc-enumeration.png)
+![RPC and NFS Enumeration](../screenshots/labs/enumeration/nfs-rpc-enumeration.png)
 
 ### NFS Export Enumeration
 
@@ -100,7 +100,7 @@ The scan identified multiple exposed services, including:
 
 The target exposes the root filesystem through NFS to hosts represented by `*`.
 
-![NFS Export Enumeration](../screenshots/enumeration/nfs-export-enumeration.png)
+![NFS Export Enumeration](../screenshots/labs/enumeration/nfs-export-enumeration.png)
 
 ---
 
@@ -130,7 +130,7 @@ The HTTP landing page also exposed several web applications, including:
 - WebDAV
 - Wiki
 
-![HTTP Enumeration](../screenshots/enumeration/http-enumeration.png)
+![HTTP Enumeration](../screenshots/labs/enumeration/http-enumeration.png)
 
 ---
 
@@ -146,7 +146,7 @@ The HTTP landing page also exposed several web applications, including:
 - Ports `6667` and `6697` are open.
 - Host identified as `irc.Metasploitable.LAN`.
 
-![IRC Enumeration](../screenshots/enumeration/irc-enumeration.png)
+![IRC Enumeration](../screenshots/labs/enumeration/irc-enumeration.png)
 
 ---
 
@@ -162,7 +162,7 @@ The HTTP landing page also exposed several web applications, including:
 - Version identified as `distccd v1`.
 - GCC version identified as `4.2.4`.
 
-![distccd Enumeration](../screenshots/enumeration/distcc-enumeration.png)
+![distccd Enumeration](../screenshots/labs/enumeration/distcc-enumeration.png)
 
 ---
 
