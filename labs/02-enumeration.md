@@ -52,7 +52,7 @@ The scan identified multiple exposed services, including:
 - Anonymous FTP login is allowed.
 - FTP connections are transmitted in plain text.
 
-![FTP Enumeration](../screenshots/labs/enumeration/ftp-enumeration.png)
+![FTP Enumeration](../screenshots/labs/enumeration/ftp-service-enumeration.png)
 
 ---
 
@@ -70,7 +70,7 @@ The scan identified multiple exposed services, including:
 - Multiple SMB shares are exposed.
 - The `tmp` share allows anonymous read/write access.
 
-![SMB Enumeration](../screenshots/labs/enumeration/smb-enumeration.png)
+![SMB Enumeration](../screenshots/labs/enumeration/smb-service-enumeration.png)
 
 ---
 
@@ -130,7 +130,7 @@ The HTTP landing page also exposed several web applications, including:
 - WebDAV
 - Wiki
 
-![HTTP Enumeration](../screenshots/labs/enumeration/http-enumeration.png)
+![HTTP Enumeration](../screenshots/labs/enumeration/http-service-enumeration.png)
 
 ---
 
@@ -146,7 +146,7 @@ The HTTP landing page also exposed several web applications, including:
 - Ports `6667` and `6697` are open.
 - Host identified as `irc.Metasploitable.LAN`.
 
-![IRC Enumeration](../screenshots/labs/enumeration/irc-enumeration.png)
+![IRC Enumeration](../screenshots/labs/enumeration/irc-service-enumeration.png)
 
 ---
 
@@ -162,7 +162,7 @@ The HTTP landing page also exposed several web applications, including:
 - Version identified as `distccd v1`.
 - GCC version identified as `4.2.4`.
 
-![distccd Enumeration](../screenshots/labs/enumeration/distcc-enumeration.png)
+![distccd Enumeration](../screenshots/labs/enumeration/distcc-service-enumeration.png)
 
 ---
 
