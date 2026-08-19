@@ -24,7 +24,7 @@ The assessment identified multiple critical vulnerabilities that allowed remote 
 | Network | Isolated VMware LAN Segment |
 | Target IP | `192.168.200.10` |
 | Attacker IP | `192.168.200.20` |
-| Testing Period | August 2026 |
+| Testing Period | August 2024 |
 
 ---
 
